@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Restaurante - Entregable 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h1>Sistema de Gestión "El Buen Sabor"</h1>
+                    </div>
+                    <div class="card-body">
+                        <h3>Descripción del Simulador</h3>
+                        <p>
+                            Este proyecto es una primera aproximación a un sistema de gestión para un restaurante. 
+                            Permite realizar tareas administrativas básicas mediante una interfaz basada en cuadros de diálogo de JavaScript.
+                        </p>
+                        <p>
+                            Actualmente, el sistema permite <strong>registrar nuevos empleados</strong>, <strong>tomar órdenes</strong> a los clientes (lo cual descuenta automáticamente el stock de los ingredientes/productos), y <strong>generar una factura</strong> final con cálculo de IVA. La interacción principal se realiza a través de la consola del navegador y ventanas emergentes (prompts y alerts).
+                        </p>
+
+                        <hr>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success btn-lg" onclick="iniciarSimulador()">INICIAR SISTEMA</button>
+                        </div>
+                        <p class="text-muted mt-3 text-center small">Abre la consola del navegador (F12) para ver registros detallados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
