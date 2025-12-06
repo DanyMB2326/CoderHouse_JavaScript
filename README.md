@@ -2,6 +2,11 @@
 **Entregable 2 – Integración HTML + CSS + JavaScript (DOM, Eventos y LocalStorage)**  
 **Autora:** Martínez Bravo Daniela  
 
+## 🔗 Enlace del Sitio
+Puedes acceder al simulador aquí:
+
+👉 ****  
+
 ---
 
 ## 📌 Descripción del Proyecto
