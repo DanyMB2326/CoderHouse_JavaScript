@@ -1,41 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Restaurante - Entregable 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Simulador Restaurante - Entregable2 MartinezBravo</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h1>Sistema de Gestión "El Buen Sabor"</h1>
-                    </div>
-                    <div class="card-body">
-                        <h3>Descripción del Simulador</h3>
-                        <p>
-                            Este proyecto es una primera aproximación a un sistema de gestión para un restaurante. 
-                            Permite realizar tareas administrativas básicas mediante una interfaz basada en cuadros de diálogo de JavaScript.
-                        </p>
-                        <p>
-                            Actualmente, el sistema permite <strong>registrar nuevos empleados</strong>, <strong>tomar órdenes</strong> a los clientes (lo cual descuenta automáticamente el stock de los ingredientes/productos), y <strong>generar una factura</strong> final con cálculo de IVA. La interacción principal se realiza a través de la consola del navegador y ventanas emergentes (prompts y alerts).
-                        </p>
-
-                        <hr>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-success btn-lg" onclick="iniciarSimulador()">INICIAR SISTEMA</button>
-                        </div>
-                        <p class="text-muted mt-3 text-center small">Abre la consola del navegador (F12) para ver registros detallados.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>
+<div class="container my-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h2 class="mb-0">Simulador "El Buen Sazón"</h2>
     </div>
+    <div class="card-body">
+      <p class="lead">Interfaz del simulador.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <section id="menu-section" class="mb-4">
+            <h4>Menú disponible</h4>
+            <div id="menu-list" class="list-group"></div>
+          </section>
 
-    <script src="main.js"></script>
+          <section id="empleados-section" class="mb-4">
+            <h4>Empleados</h4>
+            <ul id="empleados-list" class="list-group mb-2"></ul>
+            <form id="form-empleado" class="row g-2">
+              <div class="col-9">
+                <input id="input-empleado" class="form-control" placeholder="Nombre del empleado" required />
+              </div>
+              <div class="col-3">
+                <button id="btn-add-empleado" class="btn btn-outline-secondary w-100" type="submit">Agregar</button>
+              </div>
+            </form>
+            <div id="empleados-msg" class="mt-2 small text-muted"></div>
+          </section>
+
+          <section id="stock-section" class="mb-4">
+            <h4>Reabastecer stock</h4>
+            <form id="form-stock" class="row g-2 align-items-center">
+              <div class="col-6">
+                <select id="select-producto" class="form-select"></select>
+              </div>
+              <div class="col-3">
+                <input id="input-cantidad" type="number" min="1" class="form-control" placeholder="Cantidad" />
+              </div>
+              <div class="col-3">
+                <button id="btn-reabastecer" class="btn btn-outline-primary w-100" type="submit">Reabastecer</button>
+              </div>
+            </form>
+            <div id="stock-msg" class="mt-2 small text-muted"></div>
+          </section>
+        </div>
+
+        <div class="col-md-6">
+          <section id="carrito-section" class="mb-4">
+            <h4>Carrito / Orden actual</h4>
+            <div id="cart-list" class="list-group mb-2"></div>
+            <div class="d-flex gap-2">
+              <button id="btn-generar-factura" class="btn btn-success">Generar factura</button>
+              <button id="btn-vaciar-carrito" class="btn btn-outline-danger">Vaciar carrito</button>
+            </div>
+            <div id="factura-output" class="mt-3"></div>
+          </section>
+
+          <section id="app-log" class="mb-2">
+            <h6>Mensajes</h6>
+            <div id="messages" class="small text-muted"></div>
+          </section>
+
+          <section id="storage-section" class="mt-3">
+            <h6>Storage</h6>
+            <div class="d-flex gap-2">
+              <button id="btn-reset-storage" class="btn btn-outline-secondary">Restablecer datos de ejemplo</button>
+              <a id="download-json" class="btn btn-outline-info" href="#" download="menu_actual.json">Descargar menu (JSON)</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <hr />
+      <div class="small text-muted">Desarrollado por Daniela Martínez Bravo</a>.</div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
