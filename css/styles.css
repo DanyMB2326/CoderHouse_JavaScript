@@ -1,8 +1,89 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
 
-/* styles.css - estética simple y clara */
-body { background: #f4f6f8; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-.card-header h2 { font-weight: 700; font-size: 1.25rem; }
-.list-group-item { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; }
-.menu-item-info { flex: 1; }
-.btn-qty { min-width: 40px; }
-#factura-output { background: #fff; padding: 1rem; border-radius: 6px; box-shadow: 0 0 0 1px rgba(0,0,0,0.03); }
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #c0392b; /* Rojo oscuro */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Formularios */
+input, select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Para que el padding no rompa el ancho */
+}
+
+/* Botones Generales */
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-primary { background-color: #c0392b; color: white; }
+.btn-primary:hover { background-color: #a93226; }
+
+.btn-secondary { background-color: #7f8c8d; color: white; }
+.btn-danger { background-color: #e74c3c; color: white; }
+.btn-success { background-color: #27ae60; color: white; }
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th { background-color: #f2f2f2; }
+
+/* Clases de utilidad */
+.text-right { text-align: right; }
+.stock-bajo { color: red; font-weight: bold; }
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #fafafa;
+}
+
+/* Grid para el menú del mesero */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.producto-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background: white;
+}
